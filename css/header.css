@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding: 0;
+  }
+  body{
+    padding-top:4rem;
+  }
+  .header{
+    display: flex;
+    align-items: center;
+    z-index:2;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    background: rgb(245, 245, 245);
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .header .first {
+    display: flex;
+    gap:1rem;
+    align-items: center;
+  }
+  .header .first img{
+    width: 30px;
+    cursor: pointer;
+    object-fit: cover;
+  }
+  .header .right img{
+    width: 110px;
+    object-fit: cover;
+  }
+  .header .second .links{
+    display: flex;
+    gap:0.8rem;
+    margin-right:1rem;
+  }
+  .header .second .links button{
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem 0;
+  }
+  .menu-con{
+    position: fixed;
+    border-bottom: 1px solid white;
+    padding-top:0.5rem;
+    padding:0.5rem 0.7rem;
+    width: 200px;
+    top:0;
+    z-index: 4;
+    left:0;
+    display: none;
+    bottom: 0;
+    background:rgb(247, 245, 245)
+  }
+  .menu-con img{
+    width: 120px;
+    object-fit: cover;
+  }
+  .menu-con .top{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.6rem;
+    align-items: center;
+  }
+  .menu-con .top .close{
+    font-size: 1.4rem;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  .menu-con .content{
+    margin-top: 1.4rem;
+    margin-left: 1rem;
+  }
+  .menu-con .content .list{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-weight: bold;
+    margin-bottom:1rem;
+    gap:1rem
+  }
+  .menu-con .btn button{
+    border: none;
+    border:1px solid darkcyan;
+    border-radius: 0.3rem;
+    padding: 0.5rem 0.7rem;
+    color:darkcyan;
+    font-weight: bold;
+    transition: 0.7s linear;
+  }
+  .menu-con .btn button:hover{
+    background:darkcyan;
+    color: white;
+  }
+  .menu-con.opened{
+   display: block;
+  }
+  img{
+    user-select: none;
+  }

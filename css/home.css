@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns:1fr 1fr;
+}
+.container .wrap{
+    position: relative;
+}
+.container .wrap button{
+    position: absolute;
+    bottom:4.5rem;
+    right:2.5rem;
+    background:forestgreen;
+    border-width: 1px;
+    color: white;
+    font-weight: bold;
+    padding: 1rem 0.5rem;
+    width: 200px;
+
+}
+@media (max-width: 800px) {
+    .container{
+        display:flex;
+        flex-direction:column
+    }
+
+}
