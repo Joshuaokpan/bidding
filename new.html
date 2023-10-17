@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/auction-page.css"> 
+    <link rel="stylesheet" href="./css/header.css">
+    <title>Auction Page</title>
+</head>
+<body>
+    <div class="header">
+        <!-- Header content here -->
+    </div>
+
+    <div class="menu-con">
+        <!-- Menu content here -->
+    </div>
+
+    <div class="auction-container">
+        <div class="auction-item">
+            <img id="auction-image" alt="" style="width:60px">
+            <h1 id="auction-title"></h1>
+            <p id="current-bid"></p>
+            <button id="place-bid-button" class="bid-button">Place Bid</button>
+        </div>
+    </div>
+
+    <div class="middle">
+        <div class="head">
+            <div class="current">
+                <p>Current Bidder :</p>
+                <div class="wrap">
+                    <img src="img/avatar.png" alt="avatar">
+                    <div class="name" id="current-bidder-name"></div>
+                </div>
+            </div>
+        </div>
+        <div id="leaderboard"></div>
+        <div class="btn">
+            <button id="place-bid-button">Bid bot</button>
+        </div>
+    </div>
+
+    <script src="./js/menuController.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const auctionId = 27; // Replace with the actual auction ID
+            const placeBidButton = document.getElementById('place-bid-button');
+
+            placeBidButton.addEventListener('click', function () {
+                // Simulated bid placement, wallet deduction, and user ranking
+                const bidAmount = 1; // Simulated bid amount
+
+                // Simulated wallet deduction
+                let walletBalance = 100; // Simulated initial wallet balance
+                if (walletBalance >= bidAmount) {
+                    walletBalance -= bidAmount;
+                    alert('Bid placed successfully. Wallet balance: $' + walletBalance);
+
+                    // Simulated user ranking up
+                    alert('User ranked up! New rank: Gold');
+                } else {
+                    alert('Error: Not enough funds in wallet.');
+                }
+
+                fetchLeaderboardData(); // Update leaderboard after bid
+            });
+
+            // Function to fetch and display leaderboard data
+            function fetchLeaderboardData() {
+                // Simulated leaderboard data, you would replace this with your AJAX call
+                const leaderboardData = [
+                    { username: 'kevewe', bid_amount: '₦70' },
+                    { username: 'light', bid_amount: '₦40' },
+                    { username: 'potato', bid_amount: '₦30' }
+                ];
+
+                const leaderboardContainer = document.getElementById('leaderboard');
+                leaderboardContainer.innerHTML = ''; // Clear the existing content
+
+                leaderboardData.forEach(item => {
+                    const leaderboardItem = document.createElement('div');
+                    leaderboardItem.classList.add('user');
+                    leaderboardItem.innerHTML = `
+                        <div class="profile">
+                            <img src="img/avatar.png" alt="">
+                        </div>
+                        <div class="name">${item.username}</div>
+                        <div class="bid">${item.bid_amount}</div>
+                    `;
+                    leaderboardContainer.appendChild(leaderboardItem);
+                });
+            }
+
+            // Simulated auction data, you would replace this with your AJAX call
+            const auctionData = {
+                auctionTitle: "Sample Auction",
+                imagePath: "sample-image.jpg",
+                currentBid: "₦100"
+            };
+
+            // Update auction details
+            const auctionImage = document.getElementById('auction-image');
+            auctionImage.src = auctionData.imagePath;
+            const auctionTitle = document.getElementById('auction-title');
+            auctionTitle.textContent = auctionData.auctionTitle;
+            const currentBid = document.getElementById('current-bid');
+            currentBid.textContent = 'Current Bid: ' + auctionData.currentBid;
+            const currentBidderName = document.getElementById('current-bidder-name');
+            currentBidderName.textContent = 'kevwe';
+
+            // Initial leaderboard update
+            fetchLeaderboardData();
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+             <div class="header">
+        <div class="first">
+        <div class="left">
+              <div class="menu">
+                  <img src="./img/icon/menu.png" alt="menu" class="open-nav">
+              </div>
+          </div>
+          <div class="right">
+              <div class="log">
+                  <img src="./img/logo2.png" alt="logo" />
+              </div>
+          </div>
+        </div>
+  
+        <div class="second">
+          <div class="links">
+    <a href="register.php">
+        <button style="color: #00013d;">sign up</button>
+    </a>
+          
+         <a href="login.php">
+                <button style="color: #56b2b7;">login</button>
+            </a>
+          </div>
+        </div>
+         <!-- <div>      
+        <?php
+        session_start(); // Start the session
+        if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === true) {
+            // User is logged in, display user-specific content
+            echo '<a href="notifications.php">NOTIFICATIONS</a>';
+            echo '<a href="profile.php">PROFILE</a>';
+            echo '<a href="buy_bids.php">BUY BIDS</a>';
+            echo '<a href="logout.php">Logout</a>';
+        } else {
+            // User is not logged in, display a message or login link
+            echo '<a href="login.php">Login</a>';
+            echo '<a href="register.php">Sign Up</a>';
+            echo '<p>Please log in to access additional features.</p>';
+        }
+        ?>
+    </div> -->
+            </div>
+       
+          <div class="menu-con">
+              <div class="top">
+                <img src="./img/logo-colored.png" alt="" />
+                <div class="close">&times;</div>
+              </div>
+              <div class="content">
+                  <div class="list">
+                    <a href="#" style="text-decoration: none; color: black;"><p>Auctions</p></a>
+                    <a href="#" style="text-decoration: none; color: black;"><p>Spin</p></a>
+                    <a href="#" style="text-decoration: none; color: black;"><p>Games</p></a> 
+                    <a href="#" style="text-decoration: none; color: black;"><p>dice</p></a>   
+                        
+                  </div>
+                  <div class="btn">
+                      <button>Log out</button>
+                  </div>
+              </div>
+          </div>
+
+          <!-- <div class="logo">
+            <div class="logo-container">
+              <img src="https://cdn.freebiesupply.com/logos/large/2x/codepen-icon-logo-svg-vector.svg" alt="Logo">
+            </div>
+          </div> -->
+        
+          <div class="oblique">
+            <div class="main-block-oblique skew-block">
+              <div class="skew-block-repeat">
+                <a href="#">
+                  <div class="oblique-inner">
+                    <div class="image-wrapper">
+                      <div class="main-image">
+                        <img class="image-img"
+                          src="https://images.unsplash.com/photo-1583512603834-01a3a1e56241?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1888&q=80"
+                          alt="Auction">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="oblique-caption caption-top">
+                    <h2>Auctions</h2>
+                    <a href="auction.html"> <button>join now</button></a>
+                  </div>
+                </a>
+              </div>
+              <div class="skew-block-repeat">
+                <a href="#">
+                  <div class="oblique-inner">
+                    <div class="image-wrapper">
+                      <div class="main-image">
+                        <img class="image-img"
+                          src="https://images.unsplash.com/photo-1617527019968-052733f9cfe8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1856&q=80"
+                          alt="dice">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="oblique-caption caption-bottom">
+                    <h2>Dice</h2>
+                    <a href="dice.html"><button>Play now</button></a>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="oblique">
+            <div class="main-block-oblique skew-block">
+              <div class="skew-block-repeat">
+                <a href="#">
+                  <div class="oblique-inner">
+                    <div class="image-wrapper">
+                      <div class="main-image">
+                        <img class="image-img"
+                          src="https://media.istockphoto.com/id/1417665620/photo/wheel-of-fortune-on-red-background.jpg?s=1024x1024&w=is&k=20&c=--Ud7IjQXIhKub9vofgRAIT_gBNFr8r6ZE0VJDBfJ38="
+                          alt="spin">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="oblique-caption caption-top">
+                    <h2>Spin</h2>
+                    <a href="spin.html"><button>join now</button></a>
+                  </div>
+                </a>
+              </div>
+              <div class="skew-block-repeat">
+                <a href="#">
+                  <div class="oblique-inner">
+                    <div class="image-wrapper">
+                      <div class="main-image">
+                        <img class="image-img"
+                          src="https://images.unsplash.com/photo-1533237264985-ee62f6d342bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                          alt="games">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="oblique-caption caption-bottom">
+                    <h2>Games</h2>
+                    <a href="games.html"><button>Play now</button></a>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        
+          <!-- <div class="footer">
+            <ul class="landing-social-links">
+              <li>
+                <a href="#"><i class="fab fa-facebook-f fa-2x"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin-in fa-2x"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-pinterest fa-2x"></i></a>
+              </li>
+            </ul>
+            <p class="copyright">Copyright &copy; 2020. All rights reserved.</p>
+          </div> -->
+
+          <script src="./js/menuController.js"></script>
+          <script src="./js/wait.js"></script>
+</body>
+</html>
